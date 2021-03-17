@@ -20,7 +20,7 @@ OBJS=smartdns.o fast_ping.o dns_client.o dns_server.o dns.o util.o tlog.o dns_co
 
 # cflags
 ifndef CFLAGS
-CFLAGS =-O2 -g -Wall -Wstrict-prototypes -fno-omit-frame-pointer -Wstrict-aliasing 
+CFLAGS =-O3 -g -Wall -Wstrict-prototypes -fno-omit-frame-pointer -Wstrict-aliasing 
 endif
 override CFLAGS +=-Iinclude
 override CFLAGS += -DBASE_FILE_NAME=\"$(notdir $<)\"
@@ -28,7 +28,7 @@ ifdef VER
 override CFLAGS += -DSMARTDNS_VERION=\"$(VER)\"
 endif
 
-CXXFLAGS=-O2 -g -Wall -std=c++11 
+CXXFLAGS=-O3 -g -Wall -std=c++11 
 override CXXFLAGS +=-Iinclude
 
 # ldflags
